@@ -1,0 +1,23 @@
+<HeroSection @careerObjective={{this.model.careerObjective}} />
+<SkillsCards />
+<Experience />
+<PortfolioShowcase />
+<Education />
+
+<div class="py-20 panel-bg bg-opacity-25" id="info">
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TrainingPanel @trainings={{@model.trainings}} />
+        <LanguagesPanel @languages={{@model.spokenLanguages}} />
+        <a name="linkedin"></a>
+        <AwardsPanel @awards={{@model.awards}} />
+        <PersonalInfoPanel @info={{@model.personalInfo}} />
+        <SocialMediaPanel @socialLinks={{@model.socialLinks}} />
+    </div>
+</div>
+<hr>
+
+<CvSection />
+
+<ContactUs />
+<Footer />

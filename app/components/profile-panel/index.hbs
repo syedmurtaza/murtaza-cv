@@ -1,0 +1,21 @@
+<div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-6">
+    <button type="button" class="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
+        {{on "click" this.togglePanel}}>
+        <h2 class="text-xl font-semibold text-gray-800 flex items-center">
+            {{#if @icon}}
+            <span class="mr-3">{{@icon}}</span>
+            {{/if}}
+            {{@title}}
+        </h2>
+        <svg class="w-6 h-6 transform transition-transform duration-300 {{if this.isExpanded 'rotate-180'}}" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <div class="overflow-hidden transition-all duration-300 {{if this.isExpanded 'max-h-96' 'max-h-0'}}">
+        <div class="px-6 pb-4">
+            {{yield}}
+        </div>
+    </div>
+</div>

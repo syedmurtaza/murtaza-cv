@@ -1,0 +1,13 @@
+<ProfilePanel @title="Training & Workshops" @icon="🎓">
+    <ul class="space-y-4">
+        {{#each @trainings as |training|}}
+        <li class="flex items-start space-x-3 group hover:bg-gray-50 p-2 rounded-md transition-colors duration-200">
+            <span class="text-blue-500 group-hover:text-blue-600">•</span>
+            <div>
+                <span class="font-medium text-gray-900">{{training.title}}</span>
+                <span class="text-gray-500">| {{training.institution}} | {{training.year}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</ProfilePanel>

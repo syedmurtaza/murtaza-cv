@@ -1,0 +1,17 @@
+@layer components {
+    .project-card-enter {
+        @apply transition-opacity duration-300 ease-in-out opacity-0;
+    }
+
+    .project-card-enter-active {
+        @apply opacity-100;
+    }
+
+    .project-card-exit {
+        @apply transition-opacity duration-300 ease-in-out opacity-100;
+    }
+
+    .project-card-exit-active {
+        @apply opacity-0;
+    }
+}

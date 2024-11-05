@@ -1,0 +1,20 @@
+<ProfilePanel @title="Honors and Awards" @icon="🏆">
+    <ul class="space-y-4">
+        {{#each @awards as |award|}}
+        <li class="group hover:bg-gray-50 p-3 rounded-md transition-colors duration-200">
+            <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                    <span
+                        class="inline-block p-2 bg-yellow-100 text-yellow-600 rounded-full group-hover:bg-yellow-200 transition-colors duration-200">
+                        🏆
+                    </span>
+                </div>
+                <div>
+                    <h3 class="font-medium text-gray-900">{{award.title}}</h3>
+                    <p class="text-sm text-gray-500">{{award.company}} | {{award.year}}</p>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</ProfilePanel>
